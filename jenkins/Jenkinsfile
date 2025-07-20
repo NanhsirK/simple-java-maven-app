@@ -2,7 +2,7 @@ pipeline {
     agent any
     parameters{
         choice(choices: ["EU-WEST-2A", "EU-WEST-2B", "EU-WEST-2C"], description: "Environment to Dpeloy", name: "deployEnv") 
-        boolean(defaultValue: false, description: "Send Mail Post Deployment ?", name: "postMail")
+        booleanParam(defaultValue: false, description: "Send Mail Post Deployment ?", name: "postMail")
         string(defaultValue: "Deployment success!", description: "Put custom mail message body text", name: "deployMessage")
     }
     stages {
